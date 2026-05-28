@@ -1,8 +1,9 @@
 {
   "name": "Family Trip Calculator",
   "short_name": "family-trip-",
-  "start_url": "/",
+  "start_url": "/family-trip-calculator/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/family-trip-calculator/"
 }
