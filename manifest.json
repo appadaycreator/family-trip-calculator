@@ -3,7 +3,7 @@
   "short_name": "family-trip-",
   "start_url": "/family-trip-calculator/",
   "display": "standalone",
-  "background_color": "#6366f1",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "scope": "/family-trip-calculator/"
 }
