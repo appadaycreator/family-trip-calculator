@@ -3,8 +3,8 @@
 ## 概要
 
 **サービス名**: Family Trip Calculator
-**バージョン**: 1.0.0
-**更新日**: 2026-05-27
+**バージョン**: 1.1.0
+**更新日**: 2026-05-29
 **URL**: https://appadaycreator.com/family-trip-calculator/
 
 家族人数・目的地・宿泊日数から交通費・宿泊費・食費を自動計算。予算オーバー対策も提案。登録不要・完全無料でご利用いただけます。
@@ -57,6 +57,17 @@
 - [✈️ 国内旅行費用シミュレーター](https://appadaycreator.com/domestic-travel-planner/)
 - [旅行予算詳細プランナー](https://appadaycreator.com/travel-budget-planner/)
 - [温泉・旅館おすすめ診断](https://appadaycreator.com/japan-onsen-advisor/)
+
+## 変更履歴
+
+### v1.1.0（2026-05-29）
+- PWA theme-color を `#7c3aed`（デフォルト色）から `#6366F1`（サービスブランド色）に修正
+- manifest.json short_name を `family-trip-` → `家族旅行計算` に修正
+- ヘッダー説明文の切れを修正
+- 入力フォームにデフォルト値（大人2・子ども1・2泊）を設定
+- 計算結果に予算バッファ範囲（±15%）を追加
+- localStorage による入力値の保存・復元を実装
+- `twitter:title` メタタグを追加
 
 ## テスト
 

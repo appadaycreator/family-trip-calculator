@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6366f1" />
+<meta name="theme-color" content="#6366F1" />
     <title>家族旅行費用シミュレーター【無料】簡単・無料計算</title>
     <meta name="description" content="家族人数・目的地・宿泊日数から交通費・宿泊費・食費を自動計算。予算オーバー対策も提案。登録不要・完全無料でご利用いただけます。">
     <link rel="canonical" href="https://appadaycreator.com/family-trip-calculator/">
@@ -22,10 +22,11 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <meta property="og:locale" content="ja_JP">
     <meta property="og:image" content="https://appadaycreator.com/assets/ogp-default.png">
 <meta property="og:site_name" content="appadaycreator" />
+<meta name="twitter:title" content="家族旅行費用シミュレーター【無料】簡単・無料計算" />
 <meta name="twitter:image" content="https://appadaycreator.com/assets/ogp-default.png" />
 <meta name="twitter:description" content="家族人数・目的地・宿泊日数から交通費・宿泊費・食費を自動計算。予算オーバー対策も提案。登録不要・完全無料でご利用いただけます。" />
     <meta name="twitter:card" content="summary">
-    
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍👩‍👧‍👦</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -59,6 +60,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .result.show { display: block; }
         .result-value { font-size: 36px; font-weight: 700; color: #6366F1; text-align: center; padding: 16px 0; }
         .badge { display: inline-block; background: #6366F120; color: #6366F1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .budget-range { background: #f0f4ff; border-radius: 8px; padding: 10px 14px; margin-top: 8px; font-size: 13px; color: #4338ca; text-align: center; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
         @media (max-width: 480px) {
             .site-header { padding: 24px 16px; }
@@ -69,7 +71,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         }
         /* ── サービス固有CSS ── */
 
-    
+
 @media print{
   header,footer,nav,button,.no-print,
   [class*="share"],[class*="affiliate"],[id*="share"],
@@ -89,7 +91,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <header class="site-header" role="banner">
         <div class="emoji" aria-hidden="true">👨‍👩‍👧‍👦</div>
         <h1>家族旅行費用シミュレーター</h1>
-        <p>家族人数・目的地・宿泊日数から交通費・宿泊費・食費を自動計算。予算オーバー対...</p>
+        <p>家族人数・目的地・宿泊日数から交通費・宿泊費・食費を自動計算。予算オーバー対策も提案。</p>
     </header>
 
     <main id="main-content" class="container" role="main" aria-label="家族旅行費用シミュレーターのメインコンテンツ">
@@ -99,11 +101,11 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <div class="card">
           <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;">👨‍👩‍👧‍👦 家族旅行費用シミュレーター</h2>
           <label>大人の人数</label>
-          <input type="number" id="adults" placeholder="2" min="1" max="10">
+          <input type="number" id="adults" placeholder="2" min="1" max="10" value="2">
           <label style="margin-top:12px;">子どもの人数</label>
-          <input type="number" id="children" placeholder="1" min="0" max="10">
+          <input type="number" id="children" placeholder="1" min="0" max="10" value="1">
           <label style="margin-top:12px;">宿泊数（泊）</label>
-          <input type="number" id="nights" placeholder="2" min="1" max="30">
+          <input type="number" id="nights" placeholder="2" min="1" max="30" value="2">
           <label style="margin-top:12px;">目的地</label>
           <select id="destination" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;margin-top:4px;">
             <option value="0">国内近場（日帰り〜1泊）</option>
@@ -113,8 +115,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
           </select>
           <button class="btn" style="margin-top:20px;" onclick="calculate()">費用を計算する</button>
           <div class="result" id="result" style="margin-top:16px;">
-            <div class="card">
+            <div style="border-top:2px solid #e0e7ff;padding-top:16px;">
               <div id="output" style="font-size:2.2rem;font-weight:700;color:#6366F1;padding:12px 0;text-align:center;"></div>
+              <div id="budget-range" class="budget-range" style="display:none;"></div>
               <div id="trip-table" style="margin-top:8px;"></div>
               <p id="detail" style="color:#666;font-size:13px;margin-top:8px;"></p>
             </div>
@@ -198,10 +201,10 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     </footer>
 
     <script>
-    // ★ここだけ実装（約10行）★
     const CFG = {
       inputs: ['adults','children','nights'],
       error: '人数と宿泊数を入力してください',
+      storageKey: 'ftc_inputs',
     };
     function calcLogic(vals) {
       const [adults, children, nights] = vals;
@@ -220,6 +223,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       const food = Math.round(fFee * totalPeople * (nights + 1));
       const sightseeing = Math.round(sFee * totalPeople * (nights + 1));
       const total = transport + hotel + food + sightseeing;
+      const rangeMin = Math.round(total * 0.85);
+      const rangeMax = Math.round(total * 1.15);
       const destNames = ['国内近場', '国内遠方', '海外近隣（韓国・台湾等）', '海外遠方（欧米等）'];
       const tips = [
         'ETC割引・高速道路周遊パス活用で交通費を節約！',
@@ -237,19 +242,41 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       setTimeout(() => { const el = document.getElementById('trip-table'); if(el) el.innerHTML = tableHtml; }, 0);
       const result = total.toLocaleString() + ' 円';
       const detail = '節約のコツ：' + tips[destIdx];
-      return { result, detail };
+      return { result, detail, rangeMin, rangeMax };
     }
-    // ★以下変更不要★
     document.addEventListener('DOMContentLoaded',()=>{
+      // localStorageから入力値を復元
+      try {
+        const saved = JSON.parse(localStorage.getItem(CFG.storageKey) || '{}');
+        CFG.inputs.forEach(id => {
+          if (saved[id] !== undefined) {
+            const el = document.getElementById(id);
+            if (el) el.value = saved[id];
+          }
+        });
+        if (saved.destination !== undefined) {
+          const sel = document.getElementById('destination');
+          if (sel) sel.value = saved.destination;
+        }
+      } catch(e) {}
       CFG.inputs.forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{ if(e.key==='Enter') calculate(); }); });
     });
     function calculate(){
       const vals=CFG.inputs.map(id=>parseFloat(document.getElementById(id)?.value)||0);
       if(!vals[0]){ alert(CFG.error); return; }
-      const {result,detail}=calcLogic(vals);
+      const {result,detail,rangeMin,rangeMax}=calcLogic(vals);
       document.getElementById('output').textContent=typeof result==='number'?result.toLocaleString():result;
       const d=document.getElementById('detail'); if(d) d.textContent=detail||'';
+      const br=document.getElementById('budget-range');
+      if(br){ br.style.display='block'; br.textContent=`予算の目安範囲: ${rangeMin.toLocaleString()}円 〜 ${rangeMax.toLocaleString()}円（±15%バッファ）`; }
       document.getElementById('result').classList.add('show');
+      // 入力値をlocalStorageに保存
+      try {
+        const toSave = {};
+        CFG.inputs.forEach(id => { toSave[id] = document.getElementById(id)?.value; });
+        toSave.destination = document.getElementById('destination')?.value;
+        localStorage.setItem(CFG.storageKey, JSON.stringify(toSave));
+      } catch(e) {}
     }
     </script>
 </body>
