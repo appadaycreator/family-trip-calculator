@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家族旅行の費用を無料シミュレーション｜子ども人数・目的地別に計算</title>
+<meta name="description" content="家族旅行の費用を人数・目的地・宿泊日数から無料シミュレーション。子ども料金・交通費・宿泊費・食費を自動計算し、予算オーバー対策も提案。">
+<link rel="canonical" href="https://appadaycreator.com/family-trip-calculator/lp/">
+<meta property="og:title" content="家族旅行の費用を無料シミュレーション｜子ども人数・目的地別に計算">
+<meta property="og:description" content="家族旅行の費用を人数・目的地・宿泊日数から無料シミュレーション。子ども料金・交通費・宿泊費・食費を自動計算し、予算オーバー対策も提案。">
+<meta property="og:url" content="https://appadaycreator.com/family-trip-calculator/lp/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://appadaycreator.com/assets/ogp-default.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;color:#333;line-height:1.6;background:#fff}
+
+/* HEADER */
+.lp-header{background:#fff;border-bottom:1px solid #e5e7eb;padding:0 24px;position:sticky;top:0;z-index:100}
+.lp-header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.lp-logo{font-size:15px;font-weight:700;color:#0284C7;text-decoration:none}
+.lp-nav{display:flex;align-items:center;gap:24px}
+.lp-nav a{font-size:13px;color:#374151;text-decoration:none;font-weight:500}
+.lp-nav a:hover{color:#0284C7}
+.lp-nav-cta{background:#F97316;color:#fff!important;padding:8px 20px;border-radius:20px;font-weight:700!important;font-size:13px!important}
+.lp-nav-cta:hover{background:#ea6c05;color:#fff!important}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#e0f2fe 0%,#bae6fd 40%,#f0f9ff 100%);padding:40px 24px 0}
+.hero-inner{max-width:1100px;margin:0 auto;display:flex;align-items:flex-end;gap:32px}
+.hero-text{flex:1;padding-bottom:40px}
+.hero-badge{display:inline-block;background:#0284C7;color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.hero-h1{font-size:clamp(28px,4vw,42px);font-weight:900;color:#0c4a6e;line-height:1.3;margin-bottom:12px}
+.hero-h1 span{color:#F97316}
+.hero-sub{font-size:14px;color:#475569;margin-bottom:24px;line-height:1.8}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;background:#F97316;color:#fff;font-size:17px;font-weight:700;padding:16px 36px;border-radius:40px;text-decoration:none;box-shadow:0 4px 16px rgba(249,115,22,.4);transition:transform .15s}
+.hero-cta:hover{transform:translateY(-2px)}
+.hero-note{font-size:12px;color:#64748b;margin-top:10px}
+
+/* hero mini-calc */
+.hero-calc{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 32px rgba(0,0,0,.12);width:320px;flex-shrink:0;margin-bottom:40px}
+.hero-calc-title{font-size:13px;font-weight:700;color:#0284C7;margin-bottom:12px;text-align:center}
+.hero-calc label{font-size:11px;font-weight:600;color:#666;display:block;margin-top:10px}
+.hero-calc select,.hero-calc input{width:100%;padding:8px 10px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:13px;margin-top:4px;font-family:inherit}
+.hero-calc-btn{display:block;width:100%;background:#0284C7;color:#fff;border:none;padding:12px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;margin-top:14px;transition:background .2s}
+.hero-calc-btn:hover{background:#0369a1}
+.hero-result-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:12px}
+.hero-result-col{background:#f8fafc;border-radius:8px;padding:8px 6px;text-align:center}
+.hero-result-col .label{font-size:10px;color:#888;margin-bottom:2px}
+.hero-result-col .value{font-size:14px;font-weight:700;color:#0284C7}
+.hero-result-col.accent .value{color:#F97316}
+
+/* trust badges */
+.trust-bar{background:#fff;padding:16px 24px;border-bottom:1px solid #e5e7eb}
+.trust-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:#475569;font-weight:600}
+.trust-item-icon{font-size:18px}
+
+/* FEATURES */
+.section{padding:60px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{text-align:center;font-size:clamp(20px,3vw,28px);font-weight:800;color:#0c4a6e;margin-bottom:8px}
+.section-title span{color:#F97316}
+.section-sub{text-align:center;font-size:14px;color:#64748b;margin-bottom:40px}
+
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:24px 20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.feature-icon{width:56px;height:56px;object-fit:contain;margin:0 auto 12px}
+.feature-card h3{font-size:14px;font-weight:700;color:#0c4a6e;margin-bottom:8px}
+.feature-card p{font-size:12px;color:#64748b;line-height:1.7}
+
+/* STEPS */
+.steps-section{background:#f0f9ff;padding:60px 24px}
+.steps-row{display:flex;align-items:flex-start;gap:0;max-width:900px;margin:0 auto}
+.step-item{flex:1;text-align:center;padding:0 16px;position:relative}
+.step-item:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:36px;font-size:24px;color:#0284C7;font-weight:700}
+.step-num{width:64px;height:64px;background:#0284C7;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;margin:0 auto 12px}
+.step-item h3{font-size:15px;font-weight:700;color:#0c4a6e;margin-bottom:6px}
+.step-item p{font-size:12px;color:#475569;line-height:1.7}
+
+/* TEMPLATES */
+.templates-section{padding:60px 24px;background:#fff}
+.template-scroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.template-card{flex-shrink:0;width:180px;background:#fff;border-radius:12px;border:1.5px solid #e2e8f0;padding:12px;cursor:pointer;transition:border-color .15s}
+.template-card:hover{border-color:#0284C7}
+.template-card-img{width:100%;height:90px;object-fit:cover;border-radius:8px;background:linear-gradient(135deg,#bae6fd,#e0f2fe);display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:8px}
+.template-card h3{font-size:13px;font-weight:700;color:#0c4a6e;margin-bottom:4px}
+.template-card p{font-size:11px;color:#64748b}
+
+/* SAVING */
+.saving-section{padding:60px 24px;background:#fff7ed}
+.saving-title{text-align:center;font-size:clamp(18px,2.5vw,24px);font-weight:800;color:#7c2d12;margin-bottom:8px}
+.saving-sub{text-align:center;font-size:13px;color:#92400e;margin-bottom:32px}
+.saving-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+.saving-card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.saving-card-label{font-size:11px;font-weight:700;color:#F97316;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.saving-card h3{font-size:20px;font-weight:900;color:#0c4a6e;margin-bottom:4px}
+.saving-card .budget-before{font-size:13px;color:#999;text-decoration:line-through;margin-bottom:2px}
+.saving-card .budget-after{font-size:22px;font-weight:900;color:#F97316}
+.saving-card .tips{margin-top:10px;font-size:12px;color:#475569;line-height:1.7}
+.saving-card .tip-row{display:flex;gap:6px;align-items:flex-start;margin-top:6px}
+.saving-card .tip-row::before{content:'✓';color:#10b981;font-weight:700;flex-shrink:0}
+
+/* AFFILIATES */
+.affiliates-section{padding:60px 24px;background:#eff6ff}
+.affiliates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.affiliate-card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06);text-align:center}
+.affiliate-card img.icon{width:48px;height:48px;object-fit:contain;margin:0 auto 8px}
+.affiliate-card h3{font-size:14px;font-weight:700;color:#0c4a6e;margin-bottom:6px}
+.affiliate-card p{font-size:12px;color:#64748b;line-height:1.6;margin-bottom:12px}
+
+/* FAQ */
+.faq-section{padding:60px 24px;background:#fff}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.faq-item{border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.faq-q{background:#f8fafc;padding:16px 20px;font-size:14px;font-weight:700;color:#0c4a6e;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.faq-q::after{content:'＋';font-size:16px;color:#0284C7;flex-shrink:0}
+.faq-a{padding:16px 20px;font-size:13px;color:#475569;line-height:1.8;display:none}
+.faq-item.open .faq-q::after{content:'－'}
+.faq-item.open .faq-a{display:block}
+
+/* BOTTOM CTA */
+.bottom-cta{background:linear-gradient(135deg,#0c4a6e,#0284C7);padding:60px 24px;text-align:center}
+.bottom-cta h2{color:#fff;font-size:clamp(22px,3vw,32px);font-weight:900;margin-bottom:8px}
+.bottom-cta p{color:#bae6fd;font-size:14px;margin-bottom:32px}
+.bottom-cta-btn{display:inline-flex;align-items:center;gap:8px;background:#F97316;color:#fff;font-size:18px;font-weight:800;padding:18px 48px;border-radius:40px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .15s}
+.bottom-cta-btn:hover{transform:translateY(-2px)}
+
+/* FOOTER */
+.lp-footer{background:#1e293b;color:#94a3b8;padding:24px;text-align:center;font-size:12px}
+.lp-footer a{color:#94a3b8;text-decoration:none}
+.lp-footer a:hover{color:#fff}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .lp-nav{display:none}
+  .hero-inner{flex-direction:column;align-items:center}
+  .hero-calc{width:100%;margin-bottom:0}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-row{flex-direction:column;gap:24px}
+  .step-item::after{display:none}
+  .saving-grid{grid-template-columns:1fr}
+  .affiliates-grid{grid-template-columns:1fr}
+  .template-scroll{gap:12px}
+  .template-card{width:150px}
+}
+@media(max-width:480px){
+  .feature-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="lp-header">
+  <div class="lp-header-inner">
+    <a href="https://appadaycreator.com/" class="lp-logo">AppADayCreator</a>
+    <nav class="lp-nav">
+      <a href="#features">特徴</a>
+      <a href="#steps">使い方</a>
+      <a href="#templates">テンプレート</a>
+      <a href="#faq">FAQ</a>
+      <a href="../" class="lp-nav-cta">費用を計算する →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">✈️ 完全無料・登録不要</div>
+      <h1 class="hero-h1">家族旅行の費用を<br><span>無料シミュレーション</span></h1>
+      <p class="hero-sub">子ども人数・目的地・宿泊日数から交通費・宿泊費・<br>食費を自動計算。予算オーバー対策もご提案。</p>
+      <a href="../" class="hero-cta">▶ 費用を計算する（無料）</a>
+      <p class="hero-note">登録不要・スマホ対応・完全無料</p>
+    </div>
+    <!-- mini calculator -->
+    <div class="hero-calc">
+      <div class="hero-calc-title">📊 旅行費用 かんたん試算</div>
+      <label>大人の人数</label>
+      <input type="number" id="lp-adults" value="2" min="1" max="10">
+      <label>子どもの人数</label>
+      <input type="number" id="lp-children" value="1" min="0" max="10">
+      <label>宿泊日数（泊）</label>
+      <input type="number" id="lp-nights" value="2" min="1" max="30">
+      <label>目的地</label>
+      <select id="lp-dest">
+        <option value="0">国内近場</option>
+        <option value="1" selected>国内遠方（新幹線等）</option>
+        <option value="2">海外近隣（韓国・台湾）</option>
+        <option value="3">海外遠方（欧米等）</option>
+      </select>
+      <button class="hero-calc-btn" onclick="lpCalc()">費用を計算する</button>
+      <div class="hero-result-row" id="lp-result" style="display:none">
+        <div class="hero-result-col">
+          <div class="label">最小</div>
+          <div class="value" id="lp-min"></div>
+        </div>
+        <div class="hero-result-col accent">
+          <div class="label">標準</div>
+          <div class="value" id="lp-std"></div>
+        </div>
+        <div class="hero-result-col">
+          <div class="label">贅沢</div>
+          <div class="value" id="lp-max"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-item-icon">🆓</span>完全無料・登録不要</div>
+    <div class="trust-item"><span class="trust-item-icon">📱</span>スマホ完全対応</div>
+    <div class="trust-item"><span class="trust-item-icon">👶</span>子ども料金自動割引</div>
+    <div class="trust-item"><span class="trust-item-icon">🗺️</span>人気旅先テンプレ対応</div>
+    <div class="trust-item"><span class="trust-item-icon">📊</span>3段階予算で比較</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span>データ非送信・安心</div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <h2 class="section-title">家族旅行にうれしい <span>6つの特徴</span></h2>
+    <p class="section-sub">旅行費用をより正確に、より簡単に計算できる機能を搭載</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="../assets/icons/split/01-01.png" alt="子ども料金" class="feature-icon">
+        <h3>子ども年齢別の料金を自動計算</h3>
+        <p>乳幼児（0〜3歳）は無料、小学生は半額など年齢に応じた割引係数を自動で適用します。</p>
+      </div>
+      <div class="feature-card">
+        <img src="../assets/icons/split/01-02.png" alt="3段階予算" class="feature-icon">
+        <h3>最小・標準・贅沢の3段階を比較</h3>
+        <p>エコノミーから贅沢プランまで、3つの予算シナリオを並列表示してお好みの旅行を計画できます。</p>
+      </div>
+      <div class="feature-card">
+        <img src="../assets/icons/split/01-03.png" alt="季節割増" class="feature-icon">
+        <h3>繁忙期フラグで季節変動を反映</h3>
+        <p>GW・夏休み・年末年始など繁忙期には宿泊費・交通費へ割増係数を自動で反映します。</p>
+      </div>
+      <div class="feature-card">
+        <img src="../assets/icons/split/02-01.png" alt="リアルタイム計算" class="feature-icon">
+        <h3>入力するたびリアルタイム再計算</h3>
+        <p>人数や泊数を変えるたびに即座に結果を更新。ボタンを押す必要はありません。</p>
+      </div>
+      <div class="feature-card">
+        <img src="../assets/icons/split/02-02.png" alt="SNSシェア" class="feature-icon">
+        <h3>SNSシェア・もう一度ボタン完備</h3>
+        <p>計算結果をXやLINEでかんたん共有。家族やパートナーと予算を話し合えます。</p>
+      </div>
+      <div class="feature-card">
+        <img src="../assets/icons/split/02-03.png" alt="スマホ対応" class="feature-icon">
+        <h3>スマホ向けステップ式UI</h3>
+        <p>入力→確認→結果の3画面フロー。スマホでも迷わず操作できる直感的なデザインです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps-section" id="steps">
+  <div class="section-inner">
+    <h2 class="section-title">使い方はカンタン！ <span>3ステップ</span></h2>
+    <p class="section-sub">30秒ですぐに家族旅行の費用を把握できます</p>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h3>条件を入力</h3>
+        <p>人数・泊数・行き先・<br>交通手段などを入力</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h3>結果を確認</h3>
+        <p>費用内訳・グラフで<br>どこにお金がかかるか一目瞭然</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h3>予算に合わせて調整</h3>
+        <p>節約提案・じゃらん予約<br>CTAも表示されます</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMPLATES -->
+<section class="templates-section" id="templates">
+  <div class="section-inner">
+    <h2 class="section-title">人気の旅先 <span>テンプレート</span></h2>
+    <p class="section-sub">ワンクリックで入力補完！定番旅行先の相場をすぐに確認</p>
+    <div class="template-scroll">
+      <div class="template-card" onclick="goCalc('沖縄')">
+        <div class="template-card-img">🌺</div>
+        <h3>沖縄</h3>
+        <p>家族に人気No.1<br>3泊4日の王道</p>
+      </div>
+      <div class="template-card" onclick="goCalc('北海道')">
+        <div class="template-card-img">🦌</div>
+        <h3>北海道</h3>
+        <p>自然とグルメを楽しむ<br>定番旅行先</p>
+      </div>
+      <div class="template-card" onclick="goCalc('USJ')">
+        <div class="template-card-img">🎢</div>
+        <h3>USJ</h3>
+        <p>子どもが大好きな<br>テーマパーク</p>
+      </div>
+      <div class="template-card" onclick="goCalc('東京ディズニー')">
+        <div class="template-card-img">🏰</div>
+        <h3>ディズニー</h3>
+        <p>夢の王国<br>ファミリー旅行の定番</p>
+      </div>
+      <div class="template-card" onclick="goCalc('京都')">
+        <div class="template-card-img">⛩️</div>
+        <h3>京都</h3>
+        <p>歴史と文化を体験<br>修学旅行の聖地</p>
+      </div>
+      <div class="template-card" onclick="goCalc('温泉')">
+        <div class="template-card-img">♨️</div>
+        <h3>温泉旅館</h3>
+        <p>非日常を味わう<br>リラックス旅行</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAVING -->
+<section class="saving-section">
+  <div class="section-inner">
+    <h2 class="saving-title">予算オーバー時の節約提案案例</h2>
+    <p class="saving-sub">費用が想定以上になったときも、具体的な代替プランを提示します</p>
+    <div class="saving-grid">
+      <div class="saving-card">
+        <div class="saving-card-label">✈️ 交通費プラン</div>
+        <div class="budget-before">¥108,600</div>
+        <div class="budget-after">¥228,100 → <span style="color:#10b981">¥164,800</span></div>
+        <div class="tips">
+          <div class="tip-row">新幹線から高速バスに変更</div>
+          <div class="tip-row">早割航空券を活用</div>
+          <div class="tip-row">マイカー利用でETCを活用</div>
+        </div>
+      </div>
+      <div class="saving-card">
+        <div class="saving-card-label">🏨 宿泊グレードダウン</div>
+        <div class="budget-before">¥228,100</div>
+        <div class="budget-after" style="color:#0284C7">¥184,800</div>
+        <div class="tips">
+          <div class="tip-row">旅館→ビジネスホテル変更</div>
+          <div class="tip-row">じゃらん早割プランを利用</div>
+          <div class="tip-row">食事なしプランに変更</div>
+        </div>
+      </div>
+      <div class="saving-card">
+        <div class="saving-card-label">📅 日程短縮プラン</div>
+        <div class="budget-before">¥228,100</div>
+        <div class="budget-after" style="color:#8b5cf6">¥136,900</div>
+        <div class="tips">
+          <div class="tip-row">3泊→2泊に短縮</div>
+          <div class="tip-row">閑散期に日程を変更</div>
+          <div class="tip-row">食費をコンビニ活用で節約</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFFILIATES -->
+<section class="affiliates-section">
+  <div class="section-inner">
+    <h2 class="section-title">そのまま予約！ <span>スムーズな旅行準備をサポート</span></h2>
+    <p class="section-sub">計算結果をもとにお得な宿・航空券をすぐ予約できます</p>
+    <div class="affiliates-grid">
+      <div class="affiliate-card">
+        <img src="../assets/icons/split/03-01.png" alt="じゃらん" class="icon">
+        <h3>じゃらん</h3>
+        <p>国内25,000軒以上の宿を比較。<br>2%ポイント還元でお得に予約。</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" rel="nofollow noopener" target="_blank" style="display:block;background:#0284C7;color:#fff;padding:10px 16px;border-radius:20px;font-size:13px;font-weight:700;text-decoration:none">じゃらんで宿を探す →</a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" alt="">
+      </div>
+      <div class="affiliate-card">
+        <img src="../assets/icons/split/03-02.png" alt="ハピタス" class="icon">
+        <h3>ハピタス経由で節約</h3>
+        <p>旅行予約をポイントサイト経由で行うと<br>さらにポイント還元。</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" rel="nofollow noopener" target="_blank" style="display:block;background:#F97316;color:#fff;padding:10px 16px;border-radius:20px;font-size:13px;font-weight:700;text-decoration:none">ハピタスを見る →</a><img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" alt="">
+      </div>
+      <div class="affiliate-card">
+        <img src="../assets/icons/split/03-03.png" alt="旅行比較" class="icon">
+        <h3>旅行費用を計算して予約</h3>
+        <p>まずシミュレーターで総費用を把握してから<br>最適なプランを選びましょう。</p>
+        <a href="../" style="display:block;background:#10b981;color:#fff;padding:10px 16px;border-radius:20px;font-size:13px;font-weight:700;text-decoration:none">費用を計算する →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-inner">
+    <h2 class="section-title">よくある <span>質問</span></h2>
+    <p class="section-sub">シミュレーターに関するよくある疑問にお答えします</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">家族旅行の平均予算はいくらですか？</div>
+        <div class="faq-a">観光庁の調査によると、4人家族の1泊2日国内旅行の費用は交通費込みで10〜20万円程度です。新幹線利用や沖縄・北海道などの遠方は20〜30万円台になることも。本シミュレーターで条件を入力すると、より正確な目安が確認できます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">子ども料金はどのように計算されますか？</div>
+        <div class="faq-a">乳幼児（0〜2歳）は無料、幼児（3〜5歳）は大人の30%、小学生は50〜60%を目安に自動計算します。施設や交通機関によって異なるため、予約時に実際の料金をご確認ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">繁忙期の割増はどれくらいですか？</div>
+        <div class="faq-a">GW・夏休み（お盆）・年末年始は通常期比で1.5〜2倍以上になることもあります。本シミュレーターでは繁忙期フラグをONにすると、宿泊費・交通費に割増係数が自動適用されます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">スマートフォンで使えますか？</div>
+        <div class="faq-a">はい、スマートフォン・タブレット・PCすべてに完全対応しています。アプリインストール不要で、ブラウザからすぐご利用いただけます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">入力したデータは外部に送信されますか？</div>
+        <div class="faq-a">いいえ。すべての計算はブラウザ内で完結します。入力したデータが外部サーバーに送信されることはなく、プライバシーは完全に保護されます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>今すぐ無料で費用をシミュレーション！</h2>
+  <p>登録不要・完全無料。30秒で家族旅行の予算を把握しよう。</p>
+  <a href="../" class="bottom-cta-btn">▶ 費用を計算する（無料）</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="lp-footer">
+  <p>
+    <a href="https://appadaycreator.com/">AppADayCreator</a>
+    &nbsp;|&nbsp;<a href="../privacy-policy.html">プライバシーポリシー</a>
+    &nbsp;|&nbsp;<a href="../terms.html">利用規約</a>
+    &nbsp;|&nbsp;<a href="../contact.html">お問い合わせ</a>
+  </p>
+  <p style="margin-top:8px;opacity:.7">© 2026 AppADayCreator. All services are free.</p>
+</footer>
+
+<script>
+function lpCalc(){
+  const adults = parseFloat(document.getElementById('lp-adults').value)||2;
+  const children = parseFloat(document.getElementById('lp-children').value)||0;
+  const nights = parseFloat(document.getElementById('lp-nights').value)||2;
+  const destIdx = parseInt(document.getElementById('lp-dest').value)||0;
+  const table = [
+    [5000,8000,2500,1500],
+    [25000,12000,3000,2500],
+    [50000,18000,4000,4000],
+    [150000,30000,7000,8000],
+  ];
+  const [tFee,hFee,fFee,sFee] = table[destIdx];
+  const tp = adults + children*0.7;
+  const base = Math.round(tFee*tp + hFee*tp*nights + fFee*tp*(nights+1) + sFee*tp*(nights+1));
+  const fmt = v => Math.round(v/1000)*1000;
+  document.getElementById('lp-min').textContent = '¥'+fmt(base*.85).toLocaleString();
+  document.getElementById('lp-std').textContent = '¥'+fmt(base).toLocaleString();
+  document.getElementById('lp-max').textContent = '¥'+fmt(base*1.15).toLocaleString();
+  document.getElementById('lp-result').style.display = 'grid';
+}
+function goCalc(dest){
+  sessionStorage.setItem('lpTemplate', dest);
+  location.href = '../';
+}
+function toggleFaq(el){
+  el.closest('.faq-item').classList.toggle('open');
+}
+// auto calc on load
+window.addEventListener('DOMContentLoaded', lpCalc);
+</script>
+</body>
+</html>
