@@ -14,23 +14,23 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0284C7">
-<title>家族旅行の費用を無料シミュレーション｜子ども人数・目的地別に計算</title>
-<meta name="description" content="家族旅行の費用を人数・目的地・宿泊日数から無料シミュレーション。子ども料金・交通費・宿泊費・食費を自動計算し、予算オーバー対策も提案。">
+<title>家族旅行の費用を無料シミュレーション｜子どもの年齢・目的地・宿泊日数から計算</title>
+<meta name="description" content="4人家族・子どもの年齢・目的地・宿泊日数から旅行費用を無料シミュレーション。交通費・宿泊費・食費・観光費を自動計算。繁忙期対応・予算別プラン・節約提案付き。">
 <meta name="author" content="AppADayCreator">
 <link rel="canonical" href="https://appadaycreator.com/family-trip-calculator/">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="manifest" href="/family-trip-calculator/manifest.json">
-<meta property="og:title" content="家族旅行の費用を無料シミュレーション｜子ども人数・目的地別に計算">
-<meta property="og:description" content="家族旅行の費用を人数・目的地・宿泊日数から無料シミュレーション。子ども料金・交通費・宿泊費・食費を自動計算し、予算オーバー対策も提案。">
+<meta property="og:title" content="家族旅行の費用を無料シミュレーション｜子どもの年齢・目的地・宿泊日数から計算">
+<meta property="og:description" content="4人家族・子どもの年齢・目的地・宿泊日数から旅行費用を無料シミュレーション。交通費・宿泊費・食費・観光費を自動計算。繁忙期対応・予算別プラン・節約提案付き。">
 <meta property="og:url" content="https://appadaycreator.com/family-trip-calculator/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://appadaycreator.com/assets/ogp-default.png">
 <meta property="og:site_name" content="appadaycreator">
-<meta name="twitter:title" content="家族旅行の費用を無料シミュレーション｜子ども人数・目的地別に計算">
+<meta name="twitter:title" content="家族旅行の費用を無料シミュレーション｜子どもの年齢・目的地・宿泊日数から計算">
 <meta name="twitter:image" content="https://appadaycreator.com/assets/ogp-default.png">
-<meta name="twitter:description" content="家族旅行の費用を人数・目的地・宿泊日数から無料シミュレーション。子ども料金・交通費・宿泊費・食費を自動計算し、予算オーバー対策も提案。">
+<meta name="twitter:description" content="4人家族・子どもの年齢・目的地・宿泊日数から旅行費用を無料シミュレーション。交通費・宿泊費・食費・観光費を自動計算。繁忙期対応・予算別プラン・節約提案付き。">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,13 +155,13 @@ body{font-family:'Inter','Noto Sans JP',sans-serif;background:#f0f9ff;color:#1e2
 .saving-icon{width:32px;height:32px;object-fit:contain;flex-shrink:0}
 
 /* AFFILIATE */
-.affiliate-band{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-top:16px}
-.affiliate-band h3{font-size:13px;font-weight:700;color:#0c4a6e;margin-bottom:12px;text-align:center}
-.affiliate-row{display:flex;flex-direction:column;gap:8px}
-.affiliate-link{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#f0f9ff;border:1.5px solid #bae6fd;border-radius:10px;text-decoration:none;color:#0c4a6e;font-size:13px;font-weight:600;transition:background .15s}
-.affiliate-link:hover{background:#e0f2fe}
-.affiliate-link img{width:28px;height:28px;object-fit:contain;flex-shrink:0}
-.affiliate-link .arrow{margin-left:auto;color:#0284C7;font-size:14px}
+.affiliate-band{background:linear-gradient(135deg,#eff6ff 0%,#e0f2fe 100%);border:2px solid #0284C7;border-radius:16px;padding:20px;box-shadow:0 4px 12px rgba(2,132,199,.15);margin-top:16px}
+.affiliate-band h3{font-size:14px;font-weight:800;color:#0c4a6e;margin-bottom:14px;text-align:center;letter-spacing:.5px}
+.affiliate-row{display:flex;flex-direction:column;gap:10px}
+.affiliate-link{display:flex;align-items:center;gap:12px;padding:14px 18px;background:#fff;border:2px solid #0284C7;border-radius:12px;text-decoration:none;color:#0c4a6e;font-size:13px;font-weight:700;transition:all .2s;box-shadow:0 2px 6px rgba(2,132,199,.08)}
+.affiliate-link:hover{background:#0284C7;color:#fff;border-color:#0284C7;box-shadow:0 4px 12px rgba(2,132,199,.25);transform:translateY(-2px)}
+.affiliate-link img{width:32px;height:32px;object-fit:contain;flex-shrink:0}
+.affiliate-link .arrow{margin-left:auto;font-size:16px;font-weight:800}
 
 /* FULL-WIDTH SECTIONS */
 .full-section{max-width:1100px;margin:0 auto;padding:0 20px 32px}
@@ -229,6 +229,8 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
   .results-panel{position:static;margin-top:16px}
 }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"子どもを連れた旅行で最もかかりやすい費用は何ですか？","acceptedAnswer":{"@type":"Answer","text":"宿泊費と交通費が大部分を占めます。子ども向けのアクティビティ・テーマパーク料金は事前に公式サイトで確認することをおすすめします。現地で想定外の費用が発生することもあるため、全体の5〜10%程度の予備費を確保しておくと安心です。"}},{"@type":"Question","name":"旅行積立や旅行ローンは利用すべきですか？","acceptedAnswer":{"@type":"Answer","text":"旅行積立は一定額を事前に積み立てることで旅行費用を計画的に準備できます。一方でローン（後払い）は利息が発生するため、原則として予算内で旅行を計画する方が経済的です。"}},{"@type":"Question","name":"旅行保険には入った方がよいですか？","acceptedAnswer":{"@type":"Answer","text":"子どもを伴う旅行では医療費補償付きの旅行保険への加入を検討する価値があります。クレジットカードの付帯保険の内容も確認しておくとよいでしょう。詳細は保険会社・金融庁のサイトで確認してください。"}},{"@type":"Question","name":"テーマパークの費用はどのくらい見込めばよいですか？","acceptedAnswer":{"@type":"Answer","text":"大手テーマパーク（東京ディズニーリゾート・USJなど）は入園料だけで大人7,000〜10,000円前後・子ども（小学生）5,000〜8,000円程度が一般的です（2026年時点）。飲食・グッズ購入費も含めると1人あたり15,000〜25,000円程度を見込んでおくとよいでしょう。公式サイトで最新の料金を必ず確認してください。"}},{"@type":"Question","name":"家族旅行の積立は月いくらくらい必要ですか？","acceptedAnswer":{"@type":"Answer","text":"年1回・4人家族・国内1泊2日を目標とする場合、宿泊・交通・食事・観光を合わせて8〜15万円程度を想定すると、月に7,000〜12,500円を積み立てることが一つの目安です。実際の目標金額はこのシミュレーターで試算した費用をもとに逆算するのが確実です。"}},{"@type":"Question","name":"海外家族旅行の費用はどのくらい違いますか？","acceptedAnswer":{"@type":"Answer","text":"近距離アジア（韓国・台湾・タイなど）の場合、4人家族・3〜5泊で航空券+宿泊+諸費用で30〜70万円程度が目安とされます（時期・航空会社・宿のグレードで変動します）。ヨーロッパや北米では100万円以上になるケースも多く、事前の綿密な費用試算が必要です。\n      Q. 旅行費用を抑えるために最も効果的なタイミングはいつですか？"}},{"@type":"Question","name":"旅行中に想定外の出費を防ぐにはどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"全体予算の10〜15%を「予備費」として設定しておくことをおすすめします。現地での飲食費・おみやげ代・子ども向けの体験料金は事前見積もりを超えやすい傾向があります。クレジットカードの付帯旅行保険の補償内容も事前に確認しておきましょう。"}},{"@type":"Question","name":"子ども料金の年齢区分はどこで確認できますか？","acceptedAnswer":{"@type":"Answer","text":"交通機関・宿泊施設ごとに基準が異なります。JR・新幹線は6〜11歳が小人料金（大人の半額）、6歳未満は原則無料です。宿泊施設は「小学生以下」「12歳以下」など施設ごとに定義が異なるため、各施設の公式サイトで予約前に必ず確認してください。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"家族旅行費用シミュレーターの使い方","step":[{"@type":"HowToStep","name":"入力","text":"画面の入力フォームに情報を入力してください。"},{"@type":"HowToStep","name":"実行","text":"ボタンを押して計算・診断を実行してください。"},{"@type":"HowToStep","name":"確認","text":"表示された結果を確認してご活用ください。"}]}</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -286,25 +288,28 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       <div class="form-card">
         <h2><img src="assets/icons/split/04-04.png" alt="" style="width:28px;height:28px;object-fit:contain">旅行条件を入力</h2>
 
+        <div id="error-message" style="display:none;background:#fee2e2;border:1.5px solid #f87171;border-radius:10px;padding:12px;margin-bottom:14px;color:#b91c1c;font-size:13px;font-weight:600"></div>
+
         <div class="form-row">
           <div class="form-group">
             <label for="adults">大人の人数</label>
-            <input type="number" id="adults" min="1" max="10" value="2" oninput="calculate()">
+            <input type="number" id="adults" min="1" max="10" value="2" oninput="calculate()" placeholder="例：2人">
           </div>
           <div class="form-group">
             <label for="children">子どもの人数</label>
-            <input type="number" id="children" min="0" max="10" value="1" oninput="calculate()">
+            <input type="number" id="children" min="0" max="10" value="1" oninput="calculate()" placeholder="例：1人">
           </div>
         </div>
 
         <div class="form-group">
           <label for="nights">宿泊日数（泊）</label>
-          <input type="number" id="nights" min="1" max="30" value="2" oninput="calculate()">
+          <input type="number" id="nights" min="1" max="30" value="2" oninput="calculate()" placeholder="例：2泊">
         </div>
 
         <div class="form-group">
           <label for="destination">目的地・移動手段</label>
           <select id="destination" onchange="calculate()">
+            <option value="">— 選択してください —</option>
             <option value="0">国内近場（日帰り〜1泊）</option>
             <option value="1">国内遠方（新幹線・飛行機）</option>
             <option value="2">海外近隣（韓国・台湾など）</option>
@@ -315,6 +320,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <div class="form-group">
           <label for="child-ages">子どもの年齢層</label>
           <select id="child-ages" onchange="calculate()">
+            <option value="">— 選択してください —</option>
             <option value="infant">乳幼児中心（0〜5歳）</option>
             <option value="mixed" selected>混在（乳幼児＋小学生）</option>
             <option value="school">小学生中心</option>
@@ -411,19 +417,25 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
         <!-- AFFILIATE CTA -->
         <div class="affiliate-band" id="affiliate-cta" style="display:none">
-          <h3>✈️ この費用で宿を予約しよう</h3>
+          <h3>🏨 計算結果をもとに、今すぐ宿を予約</h3>
           <div class="affiliate-row">
             <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" rel="nofollow noopener" target="_blank" class="affiliate-link">
               <img src="assets/icons/split/03-01.png" alt="じゃらん">
-              <span>じゃらん — 国内25,000軒の宿を比較（2%還元）</span>
+              <span>【じゃらん】国内25,000軒から比較・予約（2%ポイント還元）</span>
               <span class="arrow">→</span>
             </a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" alt="">
             <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" rel="nofollow noopener" target="_blank" class="affiliate-link">
               <img src="assets/icons/split/03-02.png" alt="ハピタス">
-              <span>ハピタス — 予約でさらにポイント還元</span>
+              <span>【ハピタス】予約でさらにポイント還元（節約をより実感）</span>
               <span class="arrow">→</span>
             </a><img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" alt="">
           </div>
+        </div>
+
+        <!-- ADS BOT (Results Panel) -->
+        <div style="margin-top:16px">
+          <ins class="adsbygoogle" style="display:block;min-height:90px" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
         </div>
       </div>
     </div>
@@ -570,6 +582,87 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
 <a href="#" id="back-to-top" aria-label="ページトップへ戻る" title="ページトップへ">↑</a>
 
+<!-- r51-family-guide -->
+<div style="background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:1.5rem 1.75rem;margin:2rem auto;max-width:760px" id="family-trip-guide">
+  <h2 style="font-size:1.1rem;font-weight:800;color:#14532d;margin:0 0 .5rem;padding-bottom:.75rem;border-bottom:2px solid #86efac">家族旅行の費用・プランニングガイド</h2>
+  <p style="font-size:.75rem;color:#9ca3af;margin:0 0 1rem">最終更新: 2026年6月</p>
+
+  <h3 style="font-size:1rem;font-weight:700;color:#14532d;margin:1.25rem 0 .5rem">国内旅行の費用目安（1泊2日・4人家族の参考例）</h3>
+  <div style="overflow-x:auto;margin:0 0 1rem">
+    <table style="width:100%;border-collapse:collapse;font-size:.9rem">
+      <thead><tr style="background:#14532d;color:#fff">
+        <th style="padding:8px 12px;text-align:left">目的地エリア</th>
+        <th style="padding:8px 12px;text-align:center">宿泊費（目安）</th>
+        <th style="padding:8px 12px;text-align:center">交通費（目安）</th>
+        <th style="padding:8px 12px;text-align:center">合計目安</th>
+      </tr></thead>
+      <tbody>
+        <tr style="background:#fff"><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0">近郊（車で2時間以内）</td><td style="padding:8px 12px;text-align:center;border-bottom:1px solid #e2e8f0">2〜5万円</td><td style="padding:8px 12px;text-align:center;border-bottom:1px solid #e2e8f0">5,000〜1万円</td><td style="padding:8px 12px;text-align:center;border-bottom:1px solid #e2e8f0">3〜6万円</td></tr>
+        <tr style="background:#f8fafc"><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0">関東・関西主要観光地</td><td style="padding:8px 12px;text-align:center;border-bottom:1px solid #e2e8f0">3〜8万円</td><td style="padding:8px 12px;text-align:center;border-bottom:1px solid #e2e8f0">1〜4万円</td><td style="padding:8px 12px;text-align:center;border-bottom:1px solid #e2e8f0">4〜12万円</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 12px">北海道・沖縄・九州</td><td style="padding:8px 12px;text-align:center">4〜10万円</td><td style="padding:8px 12px;text-align:center">2〜8万円（航空）</td><td style="padding:8px 12px;text-align:center">6〜18万円</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.8rem;color:#6b7280;margin:-.5rem 0 1rem">※金額は一般的な旅行サービスの目安です。宿の種類・時期・人数により大きく変わります。</p>
+
+  <h3 style="font-size:1rem;font-weight:700;color:#14532d;margin:1.25rem 0 .5rem">子ども料金の主な割引・優待制度</h3>
+  <ul style="font-size:.9375rem;color:#374151;line-height:1.9;padding-left:1.25rem;margin:0 0 .75rem">
+    <li><strong>JR・新幹線：</strong>小学生は大人料金の半額、未就学児（6歳未満）は膝上座席なら無料（指定席取得は子ども料金が必要）。</li>
+    <li><strong>航空券：</strong>幼児（2歳未満）は国内線無料（座席なし）、2歳〜11歳は小児割引料金（航空会社により異なる）。早期購入で安くなる場合があります。各社の公式サイトで最新の料金体系を確認することをお勧めします。</li>
+    <li><strong>宿泊：</strong>「子ども無料プラン」「添い寝無料」はホテルによって条件が異なる。確認して予約することで費用を抑えられる。</li>
+    <li><strong>テーマパーク・観光施設：</strong>多くの施設で未就学児無料・小学生以下割引を設定。公式サイトで事前確認が確実。</li>
+  </ul>
+
+  <h3 style="font-size:1rem;font-weight:700;color:#14532d;margin:1.25rem 0 .5rem">旅行費用を抑えるための5つのポイント</h3>
+  <ul style="font-size:.9375rem;color:#374151;line-height:1.9;padding-left:1.25rem;margin:0 0 .75rem">
+    <li><strong>早期予約を活用する：</strong>航空券・新幹線の早割は45〜60日前から設定されることが多く、定価より安くなる場合があります。</li>
+    <li><strong>シーズンを外す：</strong>GW・お盆・年末年始は宿泊費・交通費が高騰します。直前の土日や平日に近い時期を選ぶと費用を抑えやすい。</li>
+    <li><strong>ふるさと納税の旅行クーポンを活用する：</strong>自治体が提供する旅行クーポンを返礼品として受け取れる場合があります（条件・対象自治体を事前に確認）。</li>
+    <li><strong>食費を工夫する：</strong>朝食付きプランと素泊まり+コンビニの比較、昼食をスーパーや道の駅で準備するなど、食事費はコントロールしやすい費用です。</li>
+    <li><strong>複数の予約サイトで比較する：</strong>じゃらん・楽天トラベル・一休.comなど複数で同条件を比較すると価格差が見つかることがあります。</li>
+  </ul>
+
+
+  <h3 style="font-size:1rem;font-weight:700;color:#14532d;margin:1.25rem 0 .5rem">旅行の計画を立てる際の手順と注意点</h3>
+  <p style="font-size:.9375rem;color:#374151;line-height:1.8;margin:0 0 .75rem">家族旅行で後悔しないためには、費用の把握だけでなく計画の手順も重要です。① 行き先と日程を決める（季節・子どもの年齢・体力を考慮）→ ② 交通手段と宿泊先を仮押さえする（キャンセル無料の宿を活用）→ ③ 観光スポット・食事の候補をリストアップ → ④ 全体の概算予算を出す → ⑤ 予備費（旅費総額の10%程度）を加えて最終確認、という流れで準備を進めると見落としが減ります。</p>
+  <p style="font-size:.9375rem;color:#374151;line-height:1.8;margin:0 0 .75rem">子どもの年齢・体力によって適切な移動時間や観光スケジュールは異なります。特に未就学児・小学校低学年を伴う場合は、詰め込みすぎず余裕のあるスケジュールにすることで、疲労や体調不良のリスクを下げることができます。</p>
+
+
+  <h3 style="font-size:1rem;font-weight:700;color:#14532d;margin:1.25rem 0 .5rem">旅行後の家計管理・振り返りのポイント</h3>
+  <p style="font-size:.9375rem;color:#374151;line-height:1.8;margin:0 0 .75rem">旅行後は実際にかかった費用をカテゴリ（交通・宿泊・食費・観光・土産）別に記録しておくことで、次回の計画精度が上がります。レシートの保管やスマホのメモアプリへの記録が有効です。クレジットカード払いが多い場合は明細でまとめて確認できます。家族旅行を年1〜2回の定期イベントとして位置付けると、年間の家計計画に組み込みやすくなります。予算と実績を比較することで、次回への改善点が自然と見えてきます。また、思い出の記録としても旅行中の写真や体験メモを残しておくと、子どもが大きくなってから振り返ることができ、旅行の価値がより長く続きます。旅行の経験は子どもの好奇心や視野を広げる機会にもなります。</p>
+  <h3 style="font-size:1rem;font-weight:700;color:#14532d;margin:1.25rem 0 .5rem">旅行費用に関する公的・参考情報源</h3>
+  <ul style="font-size:.9375rem;color:#374151;line-height:1.9;padding-left:1.25rem;margin:0 0 .75rem">
+    <li><a href="https://www.jata-net.or.jp/" target="_blank" rel="noopener noreferrer" style="color:#15803d">日本旅行業協会（JATA）</a>: 旅行に関する消費者向け情報・トラブル対応の情報を提供</li>
+    <li><a href="https://www.mlit.go.jp/kankocho/" target="_blank" rel="noopener noreferrer" style="color:#15803d">観光庁</a>: 国内旅行動向・宿泊旅行統計調査など公式データを公開</li>
+    <li>各交通機関の公式サイト: 正確な運賃・割引条件は各社の公式ページで確認することを推奨します</li>
+    <li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#15803d">消費者庁</a>: 旅行サービスに関するトラブル事例・消費者相談の情報を提供しています。旅行契約のキャンセル規定や解約料に関する情報も確認できます。</li>
+  </ul>
+  <details style="margin:.75rem 0">
+    <summary style="font-size:.9375rem;font-weight:700;color:#14532d;cursor:pointer;padding:.5rem 0">よくある質問（FAQ）</summary>
+    <div style="padding:.75rem 0 0;font-size:.9375rem;color:#374151;line-height:1.8">
+      <p><strong>Q. 子どもを連れた旅行で最もかかりやすい費用は何ですか？</strong></p>
+      <p>A. 宿泊費と交通費が大部分を占めます。子ども向けのアクティビティ・テーマパーク料金は事前に公式サイトで確認することをおすすめします。現地で想定外の費用が発生することもあるため、全体の5〜10%程度の予備費を確保しておくと安心です。</p>
+      <p style="margin-top:.75rem"><strong>Q. 旅行積立や旅行ローンは利用すべきですか？</strong></p>
+      <p>A. 旅行積立は一定額を事前に積み立てることで旅行費用を計画的に準備できます。一方でローン（後払い）は利息が発生するため、原則として予算内で旅行を計画する方が経済的です。</p>
+      <p style="margin-top:.75rem"><strong>Q. 旅行保険には入った方がよいですか？</strong></p>
+      <p>A. 子どもを伴う旅行では医療費補償付きの旅行保険への加入を検討する価値があります。クレジットカードの付帯保険の内容も確認しておくとよいでしょう。詳細は保険会社・金融庁のサイトで確認してください。</p>
+      <p style="margin-top:.75rem"><strong>Q. テーマパークの費用はどのくらい見込めばよいですか？</strong></p>
+      <p>A. 大手テーマパーク（東京ディズニーリゾート・USJなど）は入園料だけで大人7,000〜10,000円前後・子ども（小学生）5,000〜8,000円程度が一般的です（2026年時点）。飲食・グッズ購入費も含めると1人あたり15,000〜25,000円程度を見込んでおくとよいでしょう。公式サイトで最新の料金を必ず確認してください。</p>
+      <p style="margin-top:.75rem"><strong>Q. 家族旅行の積立は月いくらくらい必要ですか？</strong></p>
+      <p>A. 年1回・4人家族・国内1泊2日を目標とする場合、宿泊・交通・食事・観光を合わせて8〜15万円程度を想定すると、月に7,000〜12,500円を積み立てることが一つの目安です。実際の目標金額はこのシミュレーターで試算した費用をもとに逆算するのが確実です。</p>
+      <p style="margin-top:.75rem"><strong>Q. 海外家族旅行の費用はどのくらい違いますか？</strong></p>
+      <p>A. 近距離アジア（韓国・台湾・タイなど）の場合、4人家族・3〜5泊で航空券+宿泊+諸費用で30〜70万円程度が目安とされます（時期・航空会社・宿のグレードで変動します）。ヨーロッパや北米では100万円以上になるケースも多く、事前の綿密な費用試算が必要です。
+      <p style="margin-top:.75rem"><strong>Q. 旅行費用を抑えるために最も効果的なタイミングはいつですか？</strong></p>
+      <p>A. 宿泊施設と交通機関の早期割引を同時に活用することが最大の節約効果をもたらします。新幹線・航空券は1〜3ヶ月前の早割、宿泊は平日・オフシーズン（9〜11月・1〜2月）を選ぶことで同条件比20〜50%の節約が可能です。都道府県が実施する旅行支援キャンペーンも活用できる場合があります。</p>
+      <p style="margin-top:.75rem"><strong>Q. 旅行中に想定外の出費を防ぐにはどうすればよいですか？</strong></p>
+      <p>A. 全体予算の10〜15%を「予備費」として設定しておくことをおすすめします。現地での飲食費・おみやげ代・子ども向けの体験料金は事前見積もりを超えやすい傾向があります。クレジットカードの付帯旅行保険の補償内容も事前に確認しておきましょう。</p>
+      <p style="margin-top:.75rem"><strong>Q. 子ども料金の年齢区分はどこで確認できますか？</strong></p>
+      <p>A. 交通機関・宿泊施設ごとに基準が異なります。JR・新幹線は6〜11歳が小人料金（大人の半額）、6歳未満は原則無料です。宿泊施設は「小学生以下」「12歳以下」など施設ごとに定義が異なるため、各施設の公式サイトで予約前に必ず確認してください。</p>
+      <p style="margin-top:1rem;font-size:.85rem;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:.75rem">このシミュレーターはあくまで家族旅行費用の目安を試算するためのツールです。実際の費用は旅行先・季節・施設グレードによって異なります。旅行費用のご相談は各旅行会社または消費者庁「消費者ホットライン（188）」にお問い合わせください。</p>
+    </div>
+  </details>
+</div>
+<!-- r51-family-guide -->
 <!-- Cookie banner -->
 <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;z-index:9999;font-size:.85rem;box-shadow:0 -2px 10px rgba(0,0,0,.3)">
   <div>当サイトはCookieおよびGoogle Analyticsを使用しています。<a href="/privacy-policy.html" style="color:#60a5fa;text-decoration:underline">プライバシーポリシー</a>をご確認ください。</div>
@@ -693,9 +786,42 @@ function applyTemplate(key) {
   document.getElementById('results-wrap').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function showError(msg) {
+  const errorDiv = document.getElementById('error-message');
+  if (msg) {
+    errorDiv.textContent = msg;
+    errorDiv.style.display = 'block';
+  } else {
+    errorDiv.style.display = 'none';
+  }
+}
+
 function calculate(){
   const vals = CFG.inputs.map(id=>parseFloat(document.getElementById(id)?.value)||0);
-  if (!vals[0]) return;
+  const [adults, children, nights] = vals;
+
+  // バリデーション
+  if (adults < 1 || adults > 10) {
+    showError('⚠️ 大人の人数は1〜10人で入力してください');
+    return;
+  }
+  if (children < 0 || children > 10) {
+    showError('⚠️ 子どもの人数は0〜10人で入力してください');
+    return;
+  }
+  if (nights < 1 || nights > 30) {
+    showError('⚠️ 宿泊日数は1〜30泊で入力してください');
+    return;
+  }
+
+  const destIdx = parseInt(document.getElementById('destination')?.value||'');
+  if (destIdx === '' || destIdx < 0 || destIdx > 3) {
+    showError('⚠️ 目的地を選択してください');
+    return;
+  }
+
+  showError('');
+
   const data = calcLogic(vals);
   lastCalcResult = data;
 
